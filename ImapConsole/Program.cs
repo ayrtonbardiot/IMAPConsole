@@ -53,7 +53,16 @@ namespace ImapConsole
             foreach (KeyValuePair<string, string> entry in combo)
             {
                 string mailhost = entry.Key.Split('@')[1];
-                IMAPServer settings = servers[mailhost];
+                IMAPServer settings;
+
+                if (servers.ContainsKey(mailhost))
+                    settings = servers[mailhost];
+                else
+                {
+                    Console.WriteLine("This hoster doesn't exist, please add it on hoster.txt");
+                    continue;
+                }
+
                 try
                 {
                     Client = new ImapClient(settings.Server, settings.Port, entry.Key, entry.Value, AuthMethod.Auto, settings.isSSL);
