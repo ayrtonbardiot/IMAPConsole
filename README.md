@@ -21,3 +21,8 @@ Exemple : gmail.com:imap.gmail.com:993
 
 You can make a PR for add it to the source ;)
 
+
+<p align="center">
+Thanks to [SUP3RIA](https://github.com/SUP3RIA) for hoster.txt
+</p>
+
