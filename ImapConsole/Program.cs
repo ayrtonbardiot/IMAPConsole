@@ -45,7 +45,7 @@ namespace ImapConsole
             ImapClient Client = null;
 
             Console.WriteLine(FiggleFonts.Doom.Render("IMAPConsole"));
-            Console.WriteLine("https://github.com/notaryzw3b \n");
+            Console.WriteLine("https://github.com/frnota \n");
             Console.WriteLine("Enter mails adresses to scrape (ex: no-reply@accounts.google.com;verify@twitter.com OR verify@twitter.com) : ");
 
             string[] mailsadr = Console.ReadLine().Split(';');
@@ -71,7 +71,6 @@ namespace ImapConsole
 
                 if (Client != null)
                 {
-
                     string path = "Results\\" + now.Year + "-" + now.Month + "-" + now.Day + ";" + now.Hour + "-" + now.Minute + "\\" + entry.Key;
 
                     foreach (string mailadr in mailsadr)
